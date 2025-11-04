@@ -6,11 +6,11 @@ function person(name, age) {
   this.call = function () {
     console.log(`${name} is ${age} years old`);
   };
+  this.call()
 }
 
 // instantiating the object
 const karim = new person("Karim", 27);
-karim.call();
 
 // adding a property to the object
 karim.gender = "male";
@@ -39,3 +39,9 @@ for (let key in karim) {
 for(let key in person){
 console.log(key,  karim['key']);
 };
+
+// alternative way of getting an objects properties
+
+const keys=Object.keys(karim);
+console.log(keys);
+
